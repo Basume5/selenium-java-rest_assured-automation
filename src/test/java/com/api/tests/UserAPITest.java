@@ -3,6 +3,7 @@ package com.api.tests;
 import com.api.base.AuthService;
 import com.api.model.LoginRequest.LoginRequest;
 import com.api.model.LoginResponse.LoginResponse;
+import io.qameta.allure.*;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.testng.Assert;
@@ -11,8 +12,13 @@ import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.request;
 
+@Epic("Login Feature")
+@Feature("Valid Login")
+
 public class UserAPITest {
 
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Test Description: Login with valid user and password")
     @Test
     public void testGetUsers(){
         RestAssured.baseURI = "https://reqres.in";
