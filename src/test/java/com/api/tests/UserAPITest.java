@@ -60,5 +60,96 @@ public class UserAPITest {
 
     }
 
+    @Test(description = "Pattern Practice")
+    public void patternPractice(){
+        int num = 5;
+
+        for(int i=1;i<=num;i++)
+        {
+            String s = "";
+            for(int j=1;j<=i;j++){
+
+                s= s + " " +j;
+                System.out.println(s);
+
+            }
+            //System.out.println(i);
+        }
+    }
+
+    @Test(description = "Pattern Practice part 1")
+    public void patternPractice1(){
+        int i, j, n;
+        n=5;
+        for(i=0; i<n; i++){  //0, 1, 2, 3, 4
+            for(j=0; j<i; j++) { //0,0,1,0,1,2,0,1,2,3,0,1,2,3,4
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+    }
+
+    @Test(description = "Pattern Practice part 2")
+    public void patternPractice2(){
+        int i, j, n;
+        n=5;
+        for(i=0; i<n; i++){  //1,2,3,
+            for(j=4; j>i-1; j--) { //0,1,2,3,4,0,1,2,3,0,1,2,0,1
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+    }
+
+    @Test(description = "Pattern Practice part 3")
+    public void patternPractice3(){
+        int i, j, k ,n;
+        n=5;
+        for(i=0; i<n; i++){  //
+            for(j=4; j>i-1; j--) { //
+                System.out.print("*"+" ");
+            }
+            System.out.println();
+            for(k=-1; k<i; k++) {
+                System.out.print(" ");
+            }
+        }
+
+    }
+
+    @Test(description = "Pattern Practice part 4")
+    public void patternPractice4(){
+        int i, j, k, n;
+        n=5;
+
+        for(i=0; i<n; i++){ //number of rows
+
+            //for leading spaces
+            for(k=0; k<i; k++) {
+                System.out.print(" ");
+            }
+            //for the values being printed in each row
+            int width = n-i;
+            for(j=0; j<width; j++) {   // i=1, last position =1, i=2
+                if(i==0 || j==0 || j==width-1 ){
+                System.out.print("*");}
+                else{
+                    System.out.print(" ");
+                }
+                // add a space after each star (to create separation)
+                if (j < width - 1) {
+                    System.out.print(" ");
+                }
+            }
+
+            System.out.println();
+
+        }
+
+    }
+
+
 
     }
